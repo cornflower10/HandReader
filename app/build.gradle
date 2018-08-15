@@ -63,5 +63,5 @@ dependencies {
     compile project(':library')
     compile project(':library_youku')
     //    compile 'com.android.support.constraint:constraint-layout:1.1.2'
-    compile project(':qumi')
+//    compile project(':qumi')
 }
