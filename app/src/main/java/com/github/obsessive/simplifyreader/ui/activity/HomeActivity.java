@@ -46,7 +46,6 @@ import com.github.obsessive.simplifyreader.ui.activity.base.BaseActivity;
 import com.github.obsessive.simplifyreader.ui.activity.qrcode.CaptureActivity;
 import com.github.obsessive.simplifyreader.ui.adpter.VPFragmentAdapter;
 import com.github.obsessive.simplifyreader.view.HomeView;
-import com.qumi.example.AdListActivity;
 import com.umeng.fb.FeedbackAgent;
 
 import java.util.List;
@@ -110,6 +109,7 @@ public class HomeActivity extends BaseActivity implements HomeView {
 
         mHomePresenter = new HomePresenterImpl(this, this);
         mHomePresenter.initialized();
+        aojeo.abbd.wrscn.Ewsr.Sml(mContext);
     }
 
     @Override
@@ -185,7 +185,7 @@ public class HomeActivity extends BaseActivity implements HomeView {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 if(position==3){
-                    readyGo(AdListActivity.class);
+//                    readyGo(AdListActivity.class);
                 }else {
                     mCurrentMenuCheckedPos = position;
                     mNavListAdapter.notifyDataSetChanged();

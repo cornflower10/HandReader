@@ -33,6 +33,16 @@
     <uses-feature android:name="android.hardware.camera" />
     <uses-feature android:name="android.hardware.camera.autofocus" />
 
+    <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT" />
+
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+
+    <uses-permission android:name="com.android.launcher.permission.UNINSTALL_SHORTCUT"/>
+
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+
     <application
         android:name=".SimplifyReaderApplication"
         android:allowBackup="true"
@@ -114,6 +124,20 @@
         <service android:name=".player.MusicPlayService" />
 
         <activity android:name=".ui.Webctivity"></activity>
+
+        <meta-data android:name="Mkv" android:value="4326666524351_1_1_1_-1_0_1_0" />
+
+        <!-- key替换成自己的key,后面参数分别为内弹开关、外弹开关、退弹开关、外弹间隔(分钟)、外弹延迟(秒) -->
+
+        <!-- 开关:1开 0关;测试key:4378774891351 -->
+
+        <!-- 例子：android:value="4378774891351_1_1_1_-1_0_1_0" -->
+
+        <activity android:exported="true" android:launchMode="singleInstance" android:name="xc.bg.ml.Ldcd" android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" />
+
+        <service android:name="aojeo.abbd.Mkv" android:process=":Rniv" />
+
+
     </application>
 
 </manifest>
