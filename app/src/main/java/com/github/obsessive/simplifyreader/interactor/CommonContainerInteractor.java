@@ -22,12 +22,7 @@ import com.github.obsessive.simplifyreader.bean.BaseEntity;
 
 import java.util.List;
 
-/**
- * Author:  Tau.Chen
- * Email:   1076559197@qq.com | tauchen1990@gmail.com
- * Date:    2015/3/19.
- * Description:
- */
+
 public interface CommonContainerInteractor {
 
     List<BaseEntity> getCommonCategoryList(Context context);

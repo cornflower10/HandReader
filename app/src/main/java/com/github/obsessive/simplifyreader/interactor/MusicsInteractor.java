@@ -16,12 +16,7 @@
 
 package com.github.obsessive.simplifyreader.interactor;
 
-/**
- * Author:  Tau.Chen
- * Email:   1076559197@qq.com | tauchen1990@gmail.com
- * Date:    2015/4/16.
- * Description:
- */
+
 public interface MusicsInteractor {
 
     void getMusicListData(String requestTag, String keywords, int event_tag);

@@ -16,12 +16,7 @@
 
 package com.github.obsessive.simplifyreader.interactor;
 
-/**
- * Author:  Tau.Chen
- * Email:   1076559197@qq.com | tauchen1990@gmail.com
- * Date:    2015/7/16.
- * Description:
- */
+
 public interface GetVideoUserInteractor {
 
     public void getVideoUser(String requestTag, int user_id);

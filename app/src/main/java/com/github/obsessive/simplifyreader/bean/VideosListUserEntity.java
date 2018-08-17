@@ -19,12 +19,7 @@ package com.github.obsessive.simplifyreader.bean;
 import android.os.Parcel;
 import android.os.Parcelable;
 
-/**
- * Author:  Tau.Chen
- * Email:   1076559197@qq.com | tauchen1990@gmail.com
- * Date:    2015/4/9.
- * Description:
- */
+
 public class VideosListUserEntity implements Parcelable {
     private int id;
     private String name;

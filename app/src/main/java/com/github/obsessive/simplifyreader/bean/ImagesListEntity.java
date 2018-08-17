@@ -18,12 +18,7 @@ package com.github.obsessive.simplifyreader.bean;
 
 import java.util.List;
 
-/**
- * Author:  Tau.Chen
- * Email:   1076559197@qq.com | tauchen1990@gmail.com
- * Date:    2015/4/2.
- * Description:
- */
+
 public class ImagesListEntity {
     private String id;
     private String desc;

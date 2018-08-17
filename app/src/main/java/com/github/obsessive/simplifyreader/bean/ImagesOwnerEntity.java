@@ -16,12 +16,7 @@
 
 package com.github.obsessive.simplifyreader.bean;
 
-/**
- * Author:  Tau.Chen
- * Email:   1076559197@qq.com | tauchen1990@gmail.com
- * Date:    2015/4/2.
- * Description:
- */
+
 public class ImagesOwnerEntity {
     private String userId;
     private String userName;

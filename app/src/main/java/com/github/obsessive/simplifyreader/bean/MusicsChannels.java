@@ -16,12 +16,7 @@
 
 package com.github.obsessive.simplifyreader.bean;
 
-/**
- * Author:  Tau.Chen
- * Email:   1076559197@qq.com | tauchen1990@gmail.com
- * Date:    2015/4/24.
- * Description:
- */
+
 public class MusicsChannels {
     private String name_en;
     private int seq_id;

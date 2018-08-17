@@ -25,12 +25,6 @@ import com.github.obsessive.simplifyreader.interactor.CommonContainerInteractor;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Author:  Tau.Chen
- * Email:   1076559197@qq.com | tauchen1990@gmail.com
- * Date:    2015/4/2.
- * Description:
- */
 public class ImagesContainerInteractorImpl implements CommonContainerInteractor {
     @Override
     public List<BaseEntity> getCommonCategoryList(Context context) {

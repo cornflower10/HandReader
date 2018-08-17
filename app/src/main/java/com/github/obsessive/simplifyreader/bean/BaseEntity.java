@@ -16,12 +16,7 @@
 
 package com.github.obsessive.simplifyreader.bean;
 
-/**
- * Author:  Tau.Chen
- * Email:   1076559197@qq.com | tauchen1990@gmail.com
- * Date:    2015/3/19.
- * Description:
- */
+
 public class BaseEntity {
 
     private String id;
