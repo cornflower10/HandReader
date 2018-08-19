@@ -16,12 +16,7 @@
 
 package com.github.obsessive.simplifyreader.common;
 
-/**
- * Author:  Tau.Chen
- * Email:   1076559197@qq.com | tauchen1990@gmail.com
- * Date:    15/5/28.
- * Description:
- */
+
 public class Constants {
 
     public static final String KEY_MUSIC_PARCELABLE_DATA = "KEY_MUSIC_PARCELABLE_DATA";

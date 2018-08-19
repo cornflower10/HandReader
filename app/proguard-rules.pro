@@ -28,6 +28,12 @@
     @butterknife.* <methods>;
 }
 
+
+#权限
+-dontwarn pub.devrel.easypermissions.**
+-keep class pub.devrel.easypermissions.** { *;}
+-keep class pub.devrel.easypermissions.helper** { *;}
+
 -optimizationpasses 5          # 指定代码的压缩级别
 -dontusemixedcaseclassnames   # 是否使用大小写混合
 -dontskipnonpubliclibraryclasses #不去忽略非公共的库类
@@ -60,24 +66,66 @@
 -keep interface android.support.v7.** { *; }
 
 
--dontwarn aojeo.abbd.wrscn.**
--keep class aojeo.abbd.wrscn.** { *; }
+#忽略警告
+-ignorewarning
 
--dontwarn aojeo.abbd.**
--keep class aojeo.abbd.** { *; }
+-keepclasseswithmembernames class * {  # 保持 native 方法不被混淆
+    native <methods>;
+}
+-keepclasseswithmembers class * {   # 保持自定义控件类不被混淆
+    public <init>(android.content.Context, android.util.AttributeSet);
+}
+-keepclasseswithmembers class * {# 保持自定义控件类不被混淆
+    public <init>(android.content.Context, android.util.AttributeSet, int);
+}
+-keepclassmembers class * extends android.app.Activity { # 保持自定义控件类不被混淆
+    public void *(android.view.View);
+}
+-keepclassmembers enum * {     # 保持枚举 enum 类不被混淆
+    public static **[] values();
+    public static ** valueOf(java.lang.String);
+}
+-keep class * implements android.os.Parcelable { # 保持 Parcelable 不被混淆
+    public static final android.os.Parcelable$Creator *;
+}
 
--dontwarn aojeo.**
--keep class aojeo.** { *; }
+################<span></span>混淆保护自己项目的部分代码以及引用的第三方jar包library#########################
+#-libraryjars libs/umeng-analytics-v5.2.4.jar
+#-libraryjars libs/alipaysd<span></span>k.jar
+#<span></span>-libraryjars libs/alipaysecsdk.jar
+#-libraryjars libs/alipayutdid.jar
+#-libraryjars libs/wup-1.0.0-SNAPSHOT.jar
+#-libraryjars libs/weibosdkcore.jar
 
--dontwarn xc.**
--keep class xc.** { *; }
+#okhttp3
+-dontwarn com.squareup.okhttp3.**
+-keep class com.squareup.okhttp3.** { *;}
+-keep class okhttp3.** { *;}
+-keep class okio.** { *;}
+-dontwarn sun.security.**
+-keep class sun.security.** { *;}
+-dontwarn okio.**
+-dontwarn okhttp3.**
 
--dontwarn xc.bg.**
--keep class xc.bg.** { *; }
+-dontwarn com.squareup.okhttp.**
+-keep class com.squareup.okhttp.** { *;}
+-dontwarn okio.**
+#fastjson
+-keep class com.alibaba.fastjson.** { *; }
+-dontwarn com.alibaba.fastjson.**
+#bean注释
+-keepattributes Signature
+-keepattributes *Annotation*
 
--dontwarn xc.bg.ml.**
--keep class xc.bg.ml.** { *; }
-
-
-
+#保持 Serializable 不被混淆并且enum 类也不被混淆
+-keepclassmembers class * implements java.io.Serializable {
+    static final long serialVersionUID;
+    private static final java.io.ObjectStreamField[] serialPersistentFields;
+    !static !transient <fields>;
+    !private <methods>;
+    private void writeObject(java.io.ObjectOutputStream);
+    private void readObject(java.io.ObjectInputStream);
+    java.lang.Object writeReplace();
+    java.lang.Object readResolve();
+}
 

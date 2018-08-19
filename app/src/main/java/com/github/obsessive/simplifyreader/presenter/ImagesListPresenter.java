@@ -18,12 +18,7 @@ package com.github.obsessive.simplifyreader.presenter;
 
 import com.github.obsessive.simplifyreader.bean.ImagesListEntity;
 
-/**
- * Author:  Tau.Chen
- * Email:   1076559197@qq.com | tauchen1990@gmail.com
- * Date:    2015/4/2.
- * Description:
- */
+
 public interface ImagesListPresenter {
 
     void loadListData(String requestTag, int event_tag, String keywords, int page, boolean isSwipeRefresh);

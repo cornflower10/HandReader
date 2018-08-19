@@ -23,7 +23,6 @@ import com.github.obsessive.library.eventbus.EventCenter;
 import com.github.obsessive.library.netstatus.NetUtils;
 import com.github.obsessive.simplifyreader.R;
 import com.github.obsessive.simplifyreader.ui.activity.base.BaseSwipeBackActivity;
-import com.umeng.fb.fragment.FeedbackFragment;
 
 /**
  * Author:  Tau.Chen
@@ -33,12 +32,11 @@ import com.umeng.fb.fragment.FeedbackFragment;
  */
 public class FeedBackActivity extends BaseSwipeBackActivity {
 
-    private String mConversationId = null;
-    private FeedbackFragment mFeedbackFragment;
+//    private String mConversationId = null;
 
     @Override
     protected void onNewIntent(android.content.Intent intent) {
-        mFeedbackFragment.refresh();
+//        mFeedbackFragment.refresh();
     }
 
     @Override
@@ -48,7 +46,7 @@ public class FeedBackActivity extends BaseSwipeBackActivity {
 
     @Override
     protected void getBundleExtras(Bundle extras) {
-        mConversationId = extras.getString(FeedbackFragment.BUNDLE_KEY_CONVERSATION_ID);
+//        mConversationId = extras.getString(FeedbackFragment.BUNDLE_KEY_CONVERSATION_ID);
     }
 
     @Override
@@ -68,11 +66,11 @@ public class FeedBackActivity extends BaseSwipeBackActivity {
 
     @Override
     protected void initViewsAndEvents() {
-        mFeedbackFragment = FeedbackFragment.newInstance(mConversationId);
-
-        getSupportFragmentManager().beginTransaction()
-                .add(R.id.common_fragment_placeholder_container, mFeedbackFragment)
-                .commit();
+//        mFeedbackFragment = FeedbackFragment.newInstance(mConversationId);
+//
+//        getSupportFragmentManager().beginTransaction()
+//                .add(R.id.common_fragment_placeholder_container, mFeedbackFragment)
+//                .commit();
     }
 
     @Override

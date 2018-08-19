@@ -26,12 +26,7 @@ import com.github.obsessive.simplifyreader.utils.UriHelper;
 import com.github.obsessive.simplifyreader.utils.VolleyHelper;
 import com.google.gson.reflect.TypeToken;
 
-/**
- * Author:  Tau.Chen
- * Email:   1076559197@qq.com | tauchen1990@gmail.com
- * Date:    2015/4/2.
- * Description:
- */
+
 public class ImagesListInteractorImpl implements CommonListInteractor {
 
     private BaseMultiLoadedListener<ResponseImagesListEntity> loadedListener = null;

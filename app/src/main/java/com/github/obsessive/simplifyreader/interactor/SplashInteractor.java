@@ -19,12 +19,7 @@ package com.github.obsessive.simplifyreader.interactor;
 import android.content.Context;
 import android.view.animation.Animation;
 
-/**
- * Author:  Tau.Chen
- * Email:   1076559197@qq.com | tauchen1990@gmail.com
- * Date:    2015/3/10.
- * Description:
- */
+
 public interface SplashInteractor {
 
     int getBackgroundImageResID();

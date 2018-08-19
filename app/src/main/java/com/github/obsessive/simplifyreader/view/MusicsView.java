@@ -20,12 +20,6 @@ import com.github.obsessive.simplifyreader.bean.MusicsListEntity;
 import com.github.obsessive.simplifyreader.bean.ResponseMusicsListentity;
 import com.github.obsessive.simplifyreader.view.base.BaseView;
 
-/**
- * Author:  Tau.Chen
- * Email:   1076559197@qq.com | tauchen1990@gmail.com
- * Date:    2015/4/16.
- * Description:
- */
 public interface MusicsView extends BaseView {
 
     void refreshMusicsList(ResponseMusicsListentity data);

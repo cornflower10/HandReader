@@ -21,7 +21,6 @@ import com.github.obsessive.simplifyreader.api.ApiConstants;
 import com.github.obsessive.simplifyreader.utils.ImageLoaderHelper;
 import com.github.obsessive.simplifyreader.utils.VolleyHelper;
 import com.nostra13.universalimageloader.core.ImageLoader;
-import com.umeng.analytics.MobclickAgent;
 import com.youku.player.YoukuPlayerBaseApplication;
 
 /**
@@ -58,7 +57,6 @@ public class SimplifyReaderApplication extends YoukuPlayerBaseApplication {
     public void exitApp() {
         BaseAppManager.getInstance().clear();
         System.gc();
-        MobclickAgent.onKillProcess(this);
         android.os.Process.killProcess(android.os.Process.myPid());
     }
 }

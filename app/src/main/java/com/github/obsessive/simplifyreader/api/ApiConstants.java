@@ -18,12 +18,7 @@ package com.github.obsessive.simplifyreader.api;
 
 import android.os.Environment;
 
-/**
- * Author:  Tau.Chen
- * Email:   1076559197@qq.com | tauchen1990@gmail.com
- * Date:    2015/3/9.
- * Description:
- */
+
 public class ApiConstants {
 
     public static final class Urls {

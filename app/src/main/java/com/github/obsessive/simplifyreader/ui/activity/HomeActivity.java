@@ -16,6 +16,7 @@
 
 package com.github.obsessive.simplifyreader.ui.activity;
 
+import android.Manifest;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.support.v4.widget.DrawerLayout;
@@ -46,12 +47,12 @@ import com.github.obsessive.simplifyreader.ui.activity.base.BaseActivity;
 import com.github.obsessive.simplifyreader.ui.activity.qrcode.CaptureActivity;
 import com.github.obsessive.simplifyreader.ui.adpter.VPFragmentAdapter;
 import com.github.obsessive.simplifyreader.view.HomeView;
-import com.umeng.fb.FeedbackAgent;
 
 import java.util.List;
 
 import butterknife.ButterKnife;
 import butterknife.InjectView;
+import pub.devrel.easypermissions.EasyPermissions;
 
 /**
  * Author:  Tau.Chen
@@ -59,7 +60,7 @@ import butterknife.InjectView;
  * Date:    2015/3/12.
  * Description:
  */
-public class HomeActivity extends BaseActivity implements HomeView {
+public class HomeActivity extends BaseActivity implements HomeView,EasyPermissions.PermissionCallbacks {
 
     private static long DOUBLE_CLICK_TIME = 0L;
 
@@ -82,7 +83,7 @@ public class HomeActivity extends BaseActivity implements HomeView {
     private ListViewDataAdapter<NavigationEntity> mNavListAdapter = null;
 
     private Presenter mHomePresenter = null;
-    private FeedbackAgent mFeedbackAgent = null;
+//    private FeedbackAgent mFeedbackAgent = null;
 
     @Override
     protected int getContentViewLayoutID() {
@@ -101,11 +102,11 @@ public class HomeActivity extends BaseActivity implements HomeView {
 
     @Override
     protected void initViewsAndEvents() {
-        mFeedbackAgent = new FeedbackAgent(this);
-        mFeedbackAgent.sync();
-        mFeedbackAgent.closeFeedbackPush();
-        mFeedbackAgent.closeAudioFeedback();
-        mFeedbackAgent.setWelcomeInfo(getResources().getString(R.string.feedback_welcome_info));
+//        mFeedbackAgent = new FeedbackAgent(this);
+//        mFeedbackAgent.sync();
+//        mFeedbackAgent.closeFeedbackPush();
+//        mFeedbackAgent.closeAudioFeedback();
+//        mFeedbackAgent.setWelcomeInfo(getResources().getString(R.string.feedback_welcome_info));
 
         mHomePresenter = new HomePresenterImpl(this, this);
         mHomePresenter.initialized();
@@ -306,4 +307,15 @@ public class HomeActivity extends BaseActivity implements HomeView {
         return true;
     }
 
+    private  String[] perms = {Manifest.permission.WRITE_EXTERNAL_STORAGE, Manifest.permission.READ_EXTERNAL_STORAGE};
+
+    @Override
+    public void onPermissionsGranted(int requestCode, List<String> perms) {
+
+    }
+
+    @Override
+    public void onPermissionsDenied(int requestCode, List<String> perms) {
+
+    }
 }

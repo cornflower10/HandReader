@@ -26,12 +26,7 @@ import com.github.obsessive.simplifyreader.interactor.SplashInteractor;
 
 import java.util.Calendar;
 
-/**
- * Author:  Tau.Chen
- * Email:   1076559197@qq.com | tauchen1990@gmail.com
- * Date:    2015/3/12.
- * Description:
- */
+
 public class SplashInteractorImpl implements SplashInteractor {
 
     @Override

@@ -16,12 +16,7 @@
 
 package com.github.obsessive.simplifyreader.interactor;
 
-/**
- * Author:  Tau.Chen
- * Email:   1076559197@qq.com | tauchen1990@gmail.com
- * Date:    2015/3/20.
- * Description:
- */
+
 public interface CommonListInteractor {
 
     void getCommonListData(String requestTag, final int event_tag, String keywords, int page);

@@ -16,12 +16,7 @@
 
 package com.github.obsessive.simplifyreader.bean;
 
-/**
- * Author:  Tau.Chen
- * Email:   1076559197@qq.com | tauchen1990@gmail.com
- * Date:    2015/3/12.
- * Description:
- */
+
 public class NavigationEntity extends BaseEntity {
 
     private int iconResId;
