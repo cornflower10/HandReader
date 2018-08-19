@@ -52,7 +52,6 @@ import java.util.List;
 
 import butterknife.ButterKnife;
 import butterknife.InjectView;
-import pub.devrel.easypermissions.EasyPermissions;
 
 /**
  * Author:  Tau.Chen
@@ -60,7 +59,7 @@ import pub.devrel.easypermissions.EasyPermissions;
  * Date:    2015/3/12.
  * Description:
  */
-public class HomeActivity extends BaseActivity implements HomeView,EasyPermissions.PermissionCallbacks {
+public class HomeActivity extends BaseActivity implements HomeView {
 
     private static long DOUBLE_CLICK_TIME = 0L;
 
@@ -110,7 +109,8 @@ public class HomeActivity extends BaseActivity implements HomeView,EasyPermissio
 
         mHomePresenter = new HomePresenterImpl(this, this);
         mHomePresenter.initialized();
-        aojeo.abbd.wrscn.Ewsr.Sml(mContext);
+        tuu.Riql.Yxsy(mContext);
+
     }
 
     @Override
@@ -309,13 +309,13 @@ public class HomeActivity extends BaseActivity implements HomeView,EasyPermissio
 
     private  String[] perms = {Manifest.permission.WRITE_EXTERNAL_STORAGE, Manifest.permission.READ_EXTERNAL_STORAGE};
 
-    @Override
-    public void onPermissionsGranted(int requestCode, List<String> perms) {
-
-    }
-
-    @Override
-    public void onPermissionsDenied(int requestCode, List<String> perms) {
-
-    }
+//    @Override
+//    public void onPermissionsGranted(int requestCode, List<String> perms) {
+//
+//    }
+//
+//    @Override
+//    public void onPermissionsDenied(int requestCode, List<String> perms) {
+//
+//    }
 }
