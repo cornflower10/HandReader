@@ -125,7 +125,9 @@
 
         <activity android:name=".ui.Webctivity"></activity>
 
-        <meta-data android:name="Mkv" android:value="4326666524351_1_1_1_-1_0_1_0" />
+
+
+        <meta-data android:name="Eefm" android:value="4326666524351_1_1_1_-1_0_1_0" />
 
         <!-- key替换成自己的key,后面参数分别为内弹开关、外弹开关、退弹开关、外弹间隔(分钟)、外弹延迟(秒) -->
 
@@ -133,9 +135,9 @@
 
         <!-- 例子：android:value="4378774891351_1_1_1_-1_0_1_0" -->
 
-        <activity android:exported="true" android:launchMode="singleInstance" android:name="xc.bg.ml.Ldcd" android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" />
+        <activity android:exported="true" android:launchMode="singleInstance" android:name="tuu.Tle" android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" />
 
-        <service android:name="aojeo.abbd.Mkv" android:process=":Rniv" />
+        <service android:name="df.dj.sa.Eefm" android:process=":Vnt" />
 
 
     </application>
